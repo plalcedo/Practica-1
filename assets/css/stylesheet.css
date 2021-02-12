@@ -139,21 +139,11 @@ h3 {
 }
 
 #iconos li a {
-    color: white;
+    color: black;
     font-size: 50px;
 }
 
-#iconos li a.facebook :hover {
-    color: dodgerblue;
-    transition: 0.5s;
-}
-
-#iconos li a.instagram :hover {
-    color: hotpink;
-    transition: 0.5s;
-}
-
-#iconos li a.website :hover {
-    color: black;
+#iconos li a:hover {
+    color: white;
     transition: 0.5s;
 }
