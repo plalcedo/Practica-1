@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
 /* Afecta a todo */
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -42,7 +46,8 @@ nav ul li {
 }
 
 nav a:hover {
-    background-color: green;
+    background-color: lightblue;
+    color: black;
 }
 
 section {
@@ -61,10 +66,17 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 h1 {
     padding-left: 25px;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+h2,
+h3 {
+    font-family: 'Fira Sans', sans-serif;
 }
 
 
@@ -72,3 +84,76 @@ h1 {
 
 
 /* Id´s */
+
+#welcome {
+    width: 100%;
+    margin: 0;
+    border-radius: 0%;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    background-position: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#profilePic {
+    width: 350px;
+    height: 350px;
+    background-image: url(../img/fondoPerfil.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#aboutMe {
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #9bb1c3;
+    border-style: outset;
+    border-color: black;
+}
+
+#iconos {
+    display: block;
+    padding-top: 10px;
+    list-style: none;
+}
+
+#iconos li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#iconos li a {
+    color: white;
+    font-size: 50px;
+}
+
+#iconos li a.facebook :hover {
+    color: dodgerblue;
+    transition: 0.5s;
+}
+
+#iconos li a.instagram :hover {
+    color: hotpink;
+    transition: 0.5s;
+}
+
+#iconos li a.website :hover {
+    color: black;
+    transition: 0.5s;
+}
