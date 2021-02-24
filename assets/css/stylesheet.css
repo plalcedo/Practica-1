@@ -119,6 +119,9 @@ body {
     justify-content: center;
     overflow: hidden;
     margin-bottom: 20px;
+    animation: profilePic 2s linear;
+    border: 5px black solid;
+    transition: 0.5s;
 }
 
 #aboutMe {
@@ -128,6 +131,7 @@ body {
     background-color: #9bb1c3;
     border-style: outset;
     border-color: black;
+    animation: divBackground 6s;
 }
 
 #iconos {
@@ -145,11 +149,16 @@ body {
 #iconos li a {
     color: black;
     font-size: 50px;
+    animation: socialIcons 3s;
 }
 
 #iconos li a:hover {
     color: white;
     transition: 0.5s;
+}
+
+#siteName {
+    animation: tituloPag 3s;
 }
 
 
@@ -189,27 +198,51 @@ body {
     .nav2 ul li:hover>ul:hover {
         visibility: hidden;
     }
+    h1 {
+        font-size: 25px;
+    }
+    @keyframes profilePic {
+        from {
+            width: 0px;
+            height: 0px;
+        }
+        to {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    #profilePic:hover {
+        width: 325px;
+        height: 325px;
+        transition: 0.5s;
+    }
 }
 
 
 /* Medium */
 
 @media(min-width: 641px) and (max-width: 1007px) {
-    .nav1 {
+    .nav2 {
         display: none;
     }
-    .nav2 li>ul {
-        display: none;
+    #profilePic {
+        width: 325px;
+        height: 325px;
     }
-    .nav2 ul li:hover>ul {
-        position: absolute;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        background-color: black;
+    @keyframes profilePic {
+        from {
+            width: 0px;
+            height: 0px;
+        }
+        to {
+            width: 325px;
+            height: 325px;
+        }
     }
-    .nav2 ul li:hover>ul:hover {
-        visibility: hidden;
+    #profilePic:hover {
+        width: 350px;
+        height: 350px;
+        transition: 0.5s;
     }
 }
 
@@ -219,5 +252,52 @@ body {
 @media(min-width:1008px) {
     .nav2 {
         display: none;
+    }
+    @keyframes profilePic {
+        from {
+            width: 0px;
+            height: 0px;
+        }
+        to {
+            width: 350px;
+            height: 350px;
+        }
+    }
+    #profilePic:hover {
+        width: 375px;
+        height: 375px;
+        transition: 0.5s;
+    }
+}
+
+
+/* Animaciones */
+
+@keyframes divBackground {
+    from {
+        background-color: whitesmoke;
+    }
+    to {
+        background-color: #9bb1c3;
+    }
+}
+
+@keyframes socialIcons {
+    from {
+        color: transparent
+    }
+    to {
+        color: black;
+    }
+}
+
+@keyframes tituloPag {
+    from {
+        color: transparent;
+        margin-left: -30%;
+    }
+    to {
+        color: white;
+        margin-left: 0%;
     }
 }
